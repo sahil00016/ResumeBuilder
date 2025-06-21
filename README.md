@@ -209,4 +209,4 @@ You'll need two separate terminals running simultaneously.
   </tr>
 </table>
 
-*(A link to a full video demonstration will be added here later.)* 
+Video demonstration link: https://drive.google.com/file/d/103AkpmUFU6qjyusM8Fxxb_VbXbQ2ka1G/view?usp=drive_link
