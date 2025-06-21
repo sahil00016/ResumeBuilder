@@ -155,8 +155,8 @@ You'll need two separate terminals running simultaneously.
 
 ## 📸 Screenshots & Demonstration
 
-![image](https://github.com/user-attachments/assets/0a016202-0987-4b47-9a60-553f31ba2d05)
-![image](https://github.com/user-attachments/assets/7bb70eef-e673-486d-952e-c284995e963f)
+![image](https://github.com/user-attachments/assets/0a016202-0987-4b47-9a60-553f31ba2d05) #signup with you gmail id to clerk
+![image](https://github.com/user-attachments/assets/7bb70eef-e673-486d-952e-c284995e963f) #fill the form details
 ![image](https://github.com/user-attachments/assets/04af8397-15d5-42c7-be02-d90d131063d6) #choose a template
 ![image](https://github.com/user-attachments/assets/51158b2d-2c09-4267-a45e-5d830c0d2015) #be more specific with your needs
 ![image](https://github.com/user-attachments/assets/35f7e405-cfdf-4d74-97ad-0ebc0863575f) #directly edit your generated content on JSON file
