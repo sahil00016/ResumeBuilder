@@ -25,7 +25,7 @@ From selecting a template to fine-tuning the AI-generated content with a live pr
 
 ## ✨ Core Features
 
-- **🧠 AI-Powered Content Generation**: Leverages Google Gemini to automatically create compelling, professional text based on your profile.
+- **🧠 AI-Powered Content Generation**: Leverages Google Gemini (MODEL- gemini-1.5-flash) to automatically create compelling, professional text based on your profile.
 - **🎨 Multiple Template Options**:
   - **Classic, Modern, Minimalist**: Timeless, professional templates for any industry.
   - **AI-Styled Template (Beta)**: A cutting-edge feature where the AI structures the content into a beautiful, pre-designed layout.
@@ -209,4 +209,4 @@ You'll need two separate terminals running simultaneously.
   </tr>
 </table>
 
-*(A link to a full video demonstration will be added here later.)* 
+Video demonstration link: https://drive.google.com/file/d/103AkpmUFU6qjyusM8Fxxb_VbXbQ2ka1G/view?usp=drive_link
