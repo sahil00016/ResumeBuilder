@@ -163,6 +163,7 @@ You'll need two separate terminals running simultaneously.
 ![image](https://github.com/user-attachments/assets/4cff4c1f-1884-4907-af3a-0eaee4753336) #check for the made chaneges live
 ![image](https://github.com/user-attachments/assets/547e5f9b-38d8-4c0b-9a26-a9e1c55e39a4) #same for cover letter
 ![image](https://github.com/user-attachments/assets/b9074e03-7ab1-4498-98b8-f3c39213d9b0) #download pdf of your resume and cover letter
+![image](https://github.com/user-attachments/assets/42d7cd6a-1225-4ea4-a054-c385a6cc0ba2) #Final Output (generated pdf)
 
 
 
