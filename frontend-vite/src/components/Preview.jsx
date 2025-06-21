@@ -2,14 +2,14 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import DOMPurify from 'dompurify';
 
-const API_URL = import.meta.env.PROD ? import.meta.env.VITE_BACKEND_URL : '/api';
+const API_BASE_URL = import.meta.env.PROD ? import.meta.env.VITE_BACKEND_URL : '';
 
 export default function Preview({ template, profile, text, type, title }) {
   const [html, setHtml] = useState('');
 
   useEffect(() => {
     if (template && profile && text) {
-      axios.post(`${API_URL}/render`, { template, profile, text, type })
+      axios.post(`${API_BASE_URL}/api/render`, { template, profile, text, type })
         .then(res => setHtml(res.data))
         .catch(err => console.error(`Rendering ${type} failed`, err));
     }

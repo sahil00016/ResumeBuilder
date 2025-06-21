@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const API_URL = import.meta.env.PROD ? import.meta.env.VITE_BACKEND_URL : '/api';
+const API_BASE_URL = import.meta.env.PROD ? import.meta.env.VITE_BACKEND_URL : '';
 
 function capitalize(str) {
   if (!str) return '';
@@ -16,8 +16,8 @@ export default function Editor({ profile, template, templateName, setGeneratedCo
     setLoading(true);
     try {
       const [resumeRes, coverRes] = await Promise.all([
-        axios.post(`${API_URL}/generate`, { profile, type: 'resume', template, prompt: prompts.resume }),
-        axios.post(`${API_URL}/generate`, { profile, type: 'coverletter', template, prompt: prompts.coverletter })
+        axios.post(`${API_BASE_URL}/api/generate`, { profile, type: 'resume', template, prompt: prompts.resume }),
+        axios.post(`${API_BASE_URL}/api/generate`, { profile, type: 'coverletter', template, prompt: prompts.coverletter })
       ]);
 
       let resumeContent = resumeRes.data.text;
