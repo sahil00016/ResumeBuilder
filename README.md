@@ -20,6 +20,7 @@ This isn't just another resume builder. It's an intelligent career assistant pow
 From selecting a template to fine-tuning the AI-generated content with a live preview, every part of the experience is designed to be intuitive, fast, and effective. The standout feature is the **AI-Styled Template**, where the AI acts not just as a writer, but as a designer, structuring the resume content into a visually appealing, professional layout.
 
 Deployment link (frontend): https://resume-builder-amber-chi.vercel.app/ 
+Video demonstration link: https://drive.google.com/file/d/103AkpmUFU6qjyusM8Fxxb_VbXbQ2ka1G/view?usp=drive_link
 
 ---
 
@@ -209,4 +210,4 @@ You'll need two separate terminals running simultaneously.
   </tr>
 </table>
 
-Video demonstration link: https://drive.google.com/file/d/103AkpmUFU6qjyusM8Fxxb_VbXbQ2ka1G/view?usp=drive_link
+
