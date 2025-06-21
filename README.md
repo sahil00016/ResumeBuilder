@@ -155,4 +155,58 @@ You'll need two separate terminals running simultaneously.
 
 ## 📸 Screenshots & Demonstration
 
-*(I will add screenshots and a link to a full video demonstration here later.)* 
+<table width="100%">
+  <tr>
+    <td align="center" valign="top">
+      <img src="https://github.com/user-attachments/assets/0a016202-0987-4b47-9a60-553f31ba2d05" alt="Sign Up" width="100%">
+      <br />
+      <em>1. Sign up with secure Clerk authentication.</em>
+    </td>
+    <td align="center" valign="top">
+      <img src="https://github.com/user-attachments/assets/7bb70eef-e673-486d-952e-c284995e963f" alt="Fill Profile" width="100%">
+      <br />
+      <em>2. Fill in your professional profile details.</em>
+    </td>
+    <td align="center" valign="top">
+      <img src="https://github.com/user-attachments/assets/04af8397-15d5-42c7-be02-d90d131063d6" alt="Choose Template" width="100%">
+      <br />
+      <em>3. Choose a template (including the AI-Styled option).</em>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" valign="top">
+      <img src="https://github.com/user-attachments/assets/51158b2d-2c09-4267-a45e-5d830c0d2015" alt="Custom Prompts" width="100%">
+      <br />
+      <em>4. Add custom prompts to guide the AI.</em>
+    </td>
+    <td align="center" valign="top">
+      <img src="https://github.com/user-attachments/assets/35f7e405-cfdf-4d74-97ad-0ebc0863575f" alt="Edit Content" width="100%">
+      <br />
+      <em>5. Directly edit the AI-generated JSON content.</em>
+    </td>
+    <td align="center" valign="top">
+      <img src="https://github.com/user-attachments/assets/4cff4c1f-1884-4907-af3a-0eaee4753336" alt="Live Preview" width="100%">
+      <br />
+      <em>6. See your changes update in the live preview.</em>
+    </td>
+  </tr>
+    <tr>
+    <td align="center" valign="top">
+      <img src="https://github.com/user-attachments/assets/547e5f9b-38d8-4c0b-9a26-a9e1c55e39a4" alt="Cover Letter" width="100%">
+      <br />
+      <em>7. The generated cover letter is also editable.</em>
+    </td>
+    <td align="center" valign="top">
+      <img src="https://github.com/user-attachments/assets/b9074e03-7ab1-4498-98b8-f3c39213d9b0" alt="Download PDF" width="100%">
+      <br />
+      <em>8. Download the final documents as PDF.</em>
+    </td>
+    <td align="center" valign="top">
+      <img src="https://github.com/user-attachments/assets/42d7cd6a-1225-4ea4-a054-c385a6cc0ba2" alt="Final Output" width="100%">
+      <br />
+      <em>9. The final, professionally formatted PDF output.</em>
+    </td>
+  </tr>
+</table>
+
+*(A link to a full video demonstration will be added here later.)* 
