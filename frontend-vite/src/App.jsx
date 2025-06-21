@@ -69,19 +69,28 @@ function App() {
                 {/* Resume Section */}
                 <div className="flex flex-col items-center w-full gap-4">
                   <h3 className="text-3xl font-bold text-blue-900 self-start">Edit & Preview Resume</h3>
+                  
+                  {template === 'ai-styled' && (
+                    <div className="w-full bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 rounded-md shadow-sm">
+                      <p className="font-bold">You are editing the raw JSON data for your resume.</p>
+                      <p>Be careful to only change the text content (e.g., a job description). Avoid changing the structure or keys (e.g., "company", "role").</p>
+                    </div>
+                  )}
+
                   <textarea
-                    className="w-full rounded-lg border border-blue-200 p-4 text-base focus:ring-2 focus:ring-blue-400 outline-none bg-white shadow-sm"
+                    className="w-full rounded-lg border border-blue-200 p-4 text-base focus:ring-2 focus:ring-blue-400 outline-none bg-white shadow-sm font-mono text-sm"
                     value={generatedContent.resume}
                     onChange={e => handleContentChange('resume', e.target.value)}
-                    rows={15}
+                    rows={20}
                     placeholder="Your AI-generated resume will appear here. You can edit it directly."
                   />
+                  
                   <Preview 
                     template={template} 
                     profile={profile} 
                     text={generatedContent}
                     type="resume"
-                    title="Live Preview"
+                    title={template === 'ai-styled' ? 'AI-Styled Resume Preview' : 'Live Preview'}
                   />
                   <div className="mt-2">
                     <DownloadButton 
@@ -94,8 +103,8 @@ function App() {
                 </div>
                 {/* Cover Letter Section */}
                 <div className="flex flex-col items-center w-full gap-4">
-                   <h3 className="text-3xl font-bold text-blue-900 self-start">Edit & Preview Cover Letter</h3>
-                   <textarea
+                  <h3 className="text-3xl font-bold text-blue-900 self-start">Edit & Preview Cover Letter</h3>
+                  <textarea
                     className="w-full rounded-lg border border-blue-200 p-4 text-base focus:ring-2 focus:ring-blue-400 outline-none bg-white shadow-sm"
                     value={generatedContent.coverletter}
                     onChange={e => handleContentChange('coverletter', e.target.value)}
@@ -107,7 +116,7 @@ function App() {
                     profile={profile} 
                     text={generatedContent}
                     type="coverletter"
-                    title="Live Preview"
+                    title={template === 'ai-styled' ? 'Cover Letter Preview' : 'Live Preview'}
                   />
                   <div className="mt-2">
                     <DownloadButton 

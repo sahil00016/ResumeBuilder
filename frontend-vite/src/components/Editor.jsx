@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
+const API_URL = import.meta.env.PROD ? import.meta.env.VITE_BACKEND_URL : '/api';
+
 function capitalize(str) {
   if (!str) return '';
   return str.charAt(0).toUpperCase() + str.slice(1);
@@ -14,10 +16,23 @@ export default function Editor({ profile, template, templateName, setGeneratedCo
     setLoading(true);
     try {
       const [resumeRes, coverRes] = await Promise.all([
-        axios.post('/api/generate', { profile, type: 'resume', template, prompt: prompts.resume }),
-        axios.post('/api/generate', { profile, type: 'coverletter', template, prompt: prompts.coverletter })
+        axios.post(`${API_URL}/generate`, { profile, type: 'resume', template, prompt: prompts.resume }),
+        axios.post(`${API_URL}/generate`, { profile, type: 'coverletter', template, prompt: prompts.coverletter })
       ]);
-      setGeneratedContent({ resume: resumeRes.data.text, coverletter: coverRes.data.text });
+
+      let resumeContent = resumeRes.data.text;
+      if (template === 'ai-styled') {
+        try {
+          // Pretty-print the JSON for easier editing
+          const parsedJson = JSON.parse(resumeContent);
+          resumeContent = JSON.stringify(parsedJson, null, 2);
+        } catch (e) {
+          console.error("Failed to parse/format AI resume JSON:", e);
+          // Keep raw text if it's not valid JSON, so the user can see and fix it.
+        }
+      }
+
+      setGeneratedContent({ resume: resumeContent, coverletter: coverRes.data.text });
       onNext(); // Navigate to preview
     } catch (error) {
       console.error("AI Generation failed", error);

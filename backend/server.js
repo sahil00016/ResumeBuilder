@@ -14,7 +14,14 @@ const __dirname = path.dirname(__filename);
 dotenv.config({ path: path.resolve(__dirname, './.env') });
 
 const app = express();
-app.use(cors());
+
+// Configure CORS
+const corsOptions = {
+  origin: '*', // For now, allow all. For production, you'd restrict this to your Vercel URL.
+  optionsSuccessStatus: 200
+};
+app.use(cors(corsOptions));
+
 app.use(express.json({ limit: '2mb' }));
 
 app.use('/api/generate', aiRoutes);

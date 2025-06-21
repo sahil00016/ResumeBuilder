@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= NAME %></title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans text-gray-800">
+    <div class="max-w-4xl mx-auto p-8">
+        <header class="text-center mb-4">
+            <h1 class="text-5xl font-bold text-black"><%= NAME.toUpperCase() %></h1>
+            <div class="flex justify-center items-center space-x-4 mt-2 text-sm">
+                <span><%= EMAIL %></span>
+                <span>|</span>
+                <span><%= PHONE %></span>
+                <!-- Add other links if available in profile -->
+            </div>
+        </header>
+        <hr class="border-t border-gray-400 mb-6">
+
+        <section class="mb-6">
+            <h2 class="text-lg font-bold uppercase tracking-widest border-b-2 border-gray-300 pb-1 mb-3">Professional Summary</h2>
+            <p class="text-sm leading-relaxed"><%= professionalSummary %></p>
+        </section>
+
+        <section class="mb-6">
+            <h2 class="text-lg font-bold uppercase tracking-widest border-b-2 border-gray-300 pb-1 mb-3">Education</h2>
+            <% education.forEach(edu => { %>
+                <div class="mb-2">
+                    <div class="flex justify-between items-baseline">
+                        <h3 class="text-md font-bold"><%= edu.institution %></h3>
+                        <span class="text-sm font-medium text-gray-600"><%= edu.dateRange %></span>
+                    </div>
+                    <p class="text-sm font-semibold"><%= edu.degree %></p>
+                    <p class="text-sm text-gray-600">Relevant Coursework: <%= edu.coursework %></p>
+                </div>
+            <% }) %>
+        </section>
+
+        <section class="mb-6">
+            <h2 class="text-lg font-bold uppercase tracking-widest border-b-2 border-gray-300 pb-1 mb-3">Skills</h2>
+            <div class="text-sm">
+            <% Object.entries(skills).forEach(([category, list]) => { %>
+                <div class="flex items-start mb-1">
+                    <strong class="w-40"><%= category %>:</strong>
+                    <span><%= list.join(', ') %></span>
+                </div>
+            <% }) %>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="text-lg font-bold uppercase tracking-widest border-b-2 border-gray-300 pb-1 mb-3">Work Experience</h2>
+            <% workExperience.forEach(exp => { %>
+                <div class="mb-4">
+                    <div class="flex justify-between items-baseline">
+                        <h3 class="text-md font-bold"><%= exp.company %></h3>
+                        <span class="text-sm font-medium text-gray-600"><%= exp.dateRange %></span>
+                    </div>
+                    <p class="text-sm font-semibold italic mb-1"><%= exp.role %></p>
+                    <ul class="list-disc list-inside text-sm space-y-1">
+                        <% exp.responsibilities.forEach(res => { %>
+                            <li><%= res %></li>
+                        <% }) %>
+                    </ul>
+                </div>
+            <% }) %>
+        </section>
+    </div>
+</body>
+</html> 

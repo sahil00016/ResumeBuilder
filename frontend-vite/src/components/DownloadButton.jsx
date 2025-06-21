@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
+const API_URL = import.meta.env.PROD ? import.meta.env.VITE_BACKEND_URL : '/api';
+
 export default function DownloadButton({ template, profile, text, type }) {
   const [loading, setLoading] = useState(false);
   const documentName = type === 'coverletter' ? 'Cover_Letter' : 'Resume';
@@ -8,10 +10,10 @@ export default function DownloadButton({ template, profile, text, type }) {
   const download = async () => {
     setLoading(true);
     try {
-      const res = await axios.post('/api/render', { template, profile, text, type });
+      const res = await axios.post(`${API_URL}/render`, { template, profile, text, type });
       const filledHtml = res.data;
 
-      const pdfRes = await axios.post('/api/pdf', { html: filledHtml, filename: `${profile.name}_${documentName}` }, { responseType: 'blob' });
+      const pdfRes = await axios.post(`${API_URL}/pdf`, { html: filledHtml, filename: `${profile.name}_${documentName}` }, { responseType: 'blob' });
       const url = window.URL.createObjectURL(new Blob([pdfRes.data]));
       const link = document.createElement('a');
       link.href = url;
